@@ -1,10 +1,50 @@
 <template>
   <div>
+    <NavBar />
     <nuxt />
   </div>
 </template>
 
-<style>
+<script>
+import Vue from 'vue'
+import NavBar from '@/components/NavBar.vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTree, faRing, faSeedling } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faTree)
+library.add(faSeedling)
+library.add(faRing)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+export default {
+  components: {
+    NavBar
+  },
+  head() {
+    return {
+      titleTemplate: '%s - Tire Search',
+      title: 'Tire Tree',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `
+            Compare tire installation prices from local shops.
+          `
+        }
+      ]
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;

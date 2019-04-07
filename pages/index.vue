@@ -1,67 +1,52 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        tire-search
+  <section>
+    <div class="columns is-mobile is-centered">
+      <div id="tree-col" class="column is-narrow">
+        <!-- <h1 class="title">
+        Tire Tree
       </h1>
       <h2 class="subtitle">
-        search for tire and local installer combinations
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green"
-          >Documentation</a
-        >
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-          >GitHub</a
-        >
+        Search for tire and local installer combinations
+      </h2> -->
+        <figure class="image">
+          <img src="../static/tire-swing-silhouette-small.png" />
+        </figure>
+      </div>
+      <div id="logo-title" class="column is-narrow">
+        <p>Tire Tree</p>
       </div>
     </div>
+    <input id="main-search" class="input is-medium" type="text" />
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
+export default {}
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+<style lang="scss" scoped>
+section {
   text-align: center;
-}
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  .columns {
+    margin-top: 10%;
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+    #tree-col {
+      padding-right: 0;
+    }
 
-.links {
-  padding-top: 15px;
+    #logo-title {
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 3em;
+      color: #2e242c;
+      padding-left: 0;
+      padding-bottom: 0;
+      margin-top: 40px;
+    }
+  }
+
+  #main-search {
+    width: 50%;
+  }
 }
 </style>
