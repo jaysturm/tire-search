@@ -60,8 +60,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-// nav {
-//   background-color: #77dd77;
-// }
-</style>
+<style lang="scss" scoped></style>

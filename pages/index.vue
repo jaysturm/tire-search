@@ -2,12 +2,6 @@
   <section>
     <div class="columns is-mobile is-centered">
       <div id="tree-col" class="column is-narrow">
-        <!-- <h1 class="title">
-        Tire Tree
-      </h1>
-      <h2 class="subtitle">
-        Search for tire and local installer combinations
-      </h2> -->
         <figure class="image">
           <img src="../static/tire-swing-silhouette-small.png" />
         </figure>
@@ -17,11 +11,20 @@
       </div>
     </div>
     <input id="main-search" class="input is-medium" type="text" />
+    <div class="search-buttons">
+      <VehicleInfo />
+    </div>
   </section>
 </template>
 
 <script>
-export default {}
+import VehicleInfo from '@/components/VehicleInfo'
+
+export default {
+  components: {
+    VehicleInfo
+  }
+}
 </script>
 
 <style lang="scss" scoped>
